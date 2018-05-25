@@ -1,0 +1,17 @@
+<p>
+<a (click)="clickme()">Click</a>
+</p>
+<table style="border: 1px">
+  <tr>
+    <th> userid </th>
+    <th> ID </th>
+    <th> title </th>
+    <th> body </th>
+  </tr>
+  <tr *ngFor="let user of testResult">
+    <th>{{user.userId }}</th>
+    <th>{{user.id}}</th>
+    <th>{{user.title | uppercase}}</th>
+    <th>{{user.body}}</th>
+  </tr>
+</table>

@@ -1,0 +1,57 @@
+
+<div>
+  
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    
+  </div>
+
+      </div>
+      <div class="container col-md-9">
+      
+        <p><strong>Login Page</strong></p>
+        
+        <form ng-submit="formSubmit()" class="form">
+          <div class="col-md-2">
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
+            </div> 
+   <br>
+            <div class="form-group">
+              <input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+            </div>
+   <br>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Login</button>
+              <span class="text-danger" style="color:red">{{ error }}</span>
+            </div>
+   
+          </div>
+        </form>
+  </div>
+  
+  
+      <p>
+        dashboard works!
+      </p>
+      <a routerLink="/dashboard" (click)="login()">Dashboard</a><br><br>
+      <a routerLink="/login" (click)="clickme()">Login</a>
+<table style="border: 1px">
+  <tr>
+    <th> userid </th>
+    <th> ID </th>
+    <th> title </th>
+    <th> body </th>
+  </tr>
+  <tr *ngFor="let user of testData">
+    <th>{{user.userId}}</th>
+    <th>{{user.id | adding}}</th>
+    <th>{{user.title | uppercase}}</th>
+    <th>{{user.body}}</th>
+    
+  </tr>
+</table>
+<router-outlet></router-outlet>
